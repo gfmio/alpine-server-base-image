@@ -8,4 +8,4 @@ http://dl-cdn.alpinelinux.org/alpine/edge/community
 
 apk update
 apk add --update "$@" && rm -rf /var/cache/apk/*
-apk updgrade
+apk upgrade
