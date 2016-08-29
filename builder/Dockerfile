@@ -1,6 +1,8 @@
 FROM alpine:3.2
 COPY scripts/mkimage-alpine.bash scripts/apk-install /
 RUN /apk-install bash tzdata
+RUN apk update
+RUN apk upgrade
 RUN setup-sshd -c openssh
 RUN rc-update add hostname boot
 RUN rc-update add networking boot
